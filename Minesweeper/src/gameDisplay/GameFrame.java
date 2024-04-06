@@ -7,8 +7,11 @@ import model.LoadData;
 public class GameFrame extends JFrame {
     private LoadData loadData;
 
+    private GamePanel gamePanel;
+
     public GameFrame() {
         loadData = new LoadData();
+        add(gamePanel = new GamePanel(9, 9, 10));
         setIconImage(loadData.getListImage().get("title"));
         pack();
         setLocationRelativeTo(null);
